@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset=utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+      <title>{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description}}{% endif %}">
+      <link rel="canonical" href="{{site.baseurl}}{{page.url}}">
+      <link rel="stylesheet" href="assets/css/main.css">
+      {% if page.type =="post" %}{{ page.styles }}{% endif %}
+    </head>
+    <body class="{% if page.home %}home blog logged-in{% endif %} {{ page.type }} {%if page.body-name%}{{ page.body-name }}{% endif %}">
+
+    {{ content }}
+
+    {% if page.url == "/index.html" %}
+    <script src="/assets/js/functions.js"></script>
+    {% endif %}
+
+    
+    </body>
+</html>

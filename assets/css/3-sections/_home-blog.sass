@@ -1,0 +1,64 @@
+section.blog
+    background:
+        image: url(../img/blog-bg.jpg)
+        size: cover
+        position: center
+
+    .col-1
+        display: flex
+        align-items: center
+
+    .work-cta
+        color: #363738
+        background: white
+
+    .article-wrap
+        margin: -50px 0
+        +clearfix
+
+    .article-thumb
+        display: block
+        background:
+            size: cover
+            position: center
+        width: 25%
+        float: left
+        position: relative
+        overflow: hidden
+
+        &:after
+            content: ''
+            display: block
+            padding-top: 100%
+
+    .article-meta
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: fade-out(#3d96cb, 0.3)
+        color: white
+        padding: 10px
+        transform: translate(0%, 100%) scale(0.5)
+        transition: all 200ms ease-in-out
+        opacity: 0
+
+        .name
+            font-size: 18px
+            line-height: 1.2
+
+        .date
+            font-style: italic
+
+    .article-thumb:hover .article-meta
+        opacity: 1
+        transform: translate(0%, 0%) scale(1)
+
+    @media(max-width: 640px)
+        .desc-wrap
+            margin-top: 100px
+
+    @media(max-width: 999px) and (min-width: 640px)
+        .article-thumb
+            width: 33.3%

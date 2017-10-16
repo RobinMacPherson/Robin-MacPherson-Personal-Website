@@ -1,0 +1,25 @@
+<section class="blog">
+    <div class="flex flex--space-around">
+        <div class="col-1">
+            <div class="article-wrap">
+                {% for post in site.posts limit: 6 %}
+                <a href="{{post.url}}" style="background-image: url({{post.cover}})" class="article-thumb">
+                    <div class="article-meta">
+                        <div class="name">
+                            {{post.title}}
+                        </div>
+                        <div class="date">
+                            {{post.date | date: "%b %d, %Y"}}
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div}
+        </div>
+
+        <div class="col-1 order-first">
+            <div class="desc-wrap"><p class="home-lead">A blog about language learning and lifestlye.</p>
+            <a class="work-cta" href="">See all Articles</a>
+        </div>
+    </div>
+</section>

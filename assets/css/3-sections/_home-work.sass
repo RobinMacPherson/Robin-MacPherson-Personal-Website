@@ -1,0 +1,60 @@
+section.work
+    background:
+        image: url(../img/work-bg.jpg)
+        size: cover
+        position: center
+    overflow: hidden
+
+    .work-cta
+        color: #363738
+
+
+    .public-speaking
+        padding-top: 20px
+
+    .design
+        padding-top: 20px
+
+    .faces
+        list-style: none
+        padding: 0
+        position: relative
+        top: 800px
+        transition: all 0.3s ease-in-out
+
+        &.launched
+            top: 0px
+
+    .face
+        height: 80px
+        width: 80px
+        background:
+            size: cover
+            position: center
+        border-radius: 50%
+        margin-bottom: 35px
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.4)
+        position: relative
+        cursor: pointer
+
+    .bubble
+        color: white
+        opacity: 0
+        position: absolute
+        left: 100%
+        bottom: 50%
+        margin-left: 10px
+        width: 300px
+        background: rgba(0,0,0,0.9)
+        padding: 20px
+        border-radius: 40px 40px 40px 5px
+        border: 3px solid white
+        pointer-events: none
+        transition: all 0.3s ease-in-out
+        transform: scale(0)
+        transform-origin: bottom left
+
+
+    .face.bubble-open.bubble
+        opacity: 1
+        transform: scale(1)

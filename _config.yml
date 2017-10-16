@@ -1,0 +1,10 @@
+title: The Life of Rob
+description: "A blog about the life of Robin MacPherson."
+baseurl: ""
+url: ""
+tagline: "A journey through 9 countries and 9 languages"
+twitter_username: thelifeofrob
+github_username:  RobinMacpherson
+
+# Build settings
+markdown: kramdown
